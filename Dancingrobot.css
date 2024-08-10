@@ -1,0 +1,213 @@
+body{
+    margin: 10px;
+    padding: auto;
+    background-color: black;
+    border-block: 100px;
+    border-block-color: white;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background: white;
+    }
+    .head,.larm,.rarm,.stomach,.lleg,.rleg{
+        background-color: skyblue;
+    }
+    .head{
+        width: 200px;
+        height: 150px;
+        margin: 0 auto;
+        border-radius:200px 200px 0 0;
+        margin-bottom: 10px;
+        animation: movehead 3s infinite;
+    }
+    .eyes{
+        position:relative;
+        top: 100px;
+    }
+    .leye,.reye{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: white;
+        display: inline-block;
+    }
+    .leye{
+        margin-left: 30px;
+    }
+    .reye{
+        margin-left: 100px;
+    }
+    .upperbody{
+        width: 300px;
+        height: 150px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .larm,.rarm{
+        width: 40px;
+        height: 125px;
+        border-radius: 100px;
+        margin-top: 20px;
+        
+    }
+    .larm{
+        margin-right: 10px;
+        transition: border_radius 1s;
+        animation: movelarm 3s infinite;
+    }
+    .rarm{
+        margin-left: 10px;
+        transition: border_radius 1s;
+        animation: moverarm 3s infinite;
+    }
+    .stomach{
+        width: 200px;
+        height: 200px;
+        border-radius: 0 0 50px 50px;
+        transition: border_radius 1s;
+        animation: movestomach 3s infinite;
+    }
+    .lowerbody{
+        width:200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    .lleg,.rleg{
+        width: 40px;
+        height: 120px;
+        border-radius: 100px 100px 100px 100px;
+        display: inline-block;
+    }
+    .lleg{
+        margin-left: 45px;
+        transition: border_radius 1s;
+        animation: movelleg 3s infinite;
+    }
+    .rleg{
+        margin-left: 30px;
+        transition: border_radius 1s;
+        animation: moverleg 3s infinite;
+    }
+    .robot:hover .head{
+        animation: movehead 2s infinite;
+
+    }
+    .robot:hover .stomach{
+        animation: movestomach 2s infinite;
+    }
+    .robot:hover .larm{
+        animation: movelarm 2s infinite;
+    }
+    .robot:hover .rarm{
+        animation: moverrarm 2s infinite;
+    }
+    .robot:hover .lleg{
+        animation: movelleg 2s infinite;
+    }
+    .robot:hover .rleg{
+        animation: moverleg 2s infinite;
+    }
+    @keyframes movehead{
+        0%{
+            width: 200px;
+        }
+        25%{
+            width: 300px;
+        }
+        50%{
+            width: 200px;
+        }
+        75%{
+            width: 300px;
+        }
+        100%{
+            width: 200px;
+        }
+    }
+    @keyframes movestomach{
+        from{
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes movelarm{
+        0%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+        25%{
+            transform: rotate(90deg);
+            transform-origin: top center;
+        }
+        50%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+        75%{
+            transform: rotate(90deg);
+            transform-origin: top center;
+        }
+        100%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+    }
+    @keyframes moverarm{
+        0%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+        25%{
+            transform: rotate(-90deg);
+            transform-origin: top center;
+        }
+        50%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+        75%{
+            transform: rotate(-90deg);
+            transform-origin: top center;
+        }
+        100%{
+            transform: rotate(0deg);
+            transform-origin: top center;
+        }
+    }
+    @keyframes movelleg{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(20deg);
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(20deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    @keyframes moverleg{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(-20deg);
+        }
+        50%{
+            transform: rotate(0deg);
+        }
+        75%{
+            transform: rotate(-20deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
